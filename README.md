@@ -1,5 +1,5 @@
 # AITexasHoldemForWeb
-run back/webserve.py
+run back/webserve.py;
 
-open bin/poker1.html
+open bin/poker1.html.
 
