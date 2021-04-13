@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+    background-image: linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% );
+}
+h1{
+    background-image: linear-gradient( 109.6deg,  rgba(5,84,94,1) 16%, #bbb 91.1% );
+    height: 2em;
+    line-height: 2em;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+.head-box{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient( 110.1deg,  rgba(34,126,34,1) 2.9%, rgba(168,251,60,1) 90.3% );
+    margin: 0 auto;
+}
+td{
+    height: 40px;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.innercard{
+    width: 118px;
+}
+.card-container {
+    width: 120px;
+    height: 86%;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .cover, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .50s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: .4rem;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .18);
+    text-shadow: 0 .15rem .2rem rgba(0, 0, 0, .2);
+  }
+  .cover {
+    
+    transform: rotatey(0deg);
+    background-image: radial-gradient( circle 484px at 49.4% 19%,  rgba(23,156,214,1) 0%, rgba(52,48,111,1) 100.2% );
+    color: #fff;
+  }
+  /* .card-container:hover .cover {
+    transform: rotatey(180deg);
+  } */
+  .back {
+    transform: rotatey(-180deg);
+  }
+  /* .card-container:hover .back {
+    transform: rotatey(0deg);
+  } */
+ #bet{
+  width: 100px;
+  height: 20px;
+  margin: 2px 50% ;
+  border: 1px solid grey;
+  border-radius: 4px;
+ }
+#actiongreen{
+  outline: none;
+  margin: 0 50%;
+  width: 100px;
+  height: 32px;
+  border: 0;
+  color: aliceblue;
+  background: url('images/playeraction_green.png');
+  
+  background-repeat: no-repeat;
+  background-size: 100% 100%;  
+ }
+ #actionblue{
+  outline: none;
+  margin: 2px 50%;
+  width: 100px;
+  height: 32px;
+  border: 0;
+  color: aliceblue;
+  background: url('images/playeraction_blue.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;  
+}
+#actionred{
+  outline: none;
+  margin: 0 50%;
+  width: 100px;
+  height: 32px;
+  border: 0;
+  color: aliceblue;
+  background: url('images/playeraction_red.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;  
+}
+ #actiongreen:hover{
+  
+  background-image: url('images/playeraction_green_checked.png');
+}
+.actBox #actionblue:hover{
+  
+  background-image: url('images/playeraction_blue_checked.png');
+}
+.actBox #actionred:hover{
+  
+  background-image: url('images/playeraction_red_checked.png');
+}

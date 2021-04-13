@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Dosph">
+    <meta name="description" content="AI poker"> 
+    <title>websocket通信客户端</title>
+    <link rel="stylesheet" href="table.css">
+    <script defer src="main.js"> </script>
+</head>
+
+<body>
+    <h1>TexasHoldem Poker</h1>
+    <hr>
+    <div class="head-box">
+        <div class="box1">
+
+            <table border="0">
+                <tr>
+                    <td>Robot win：</td>
+                    <td id="aiwin">0</td>
+                </tr>
+                <tr>
+                    <td>Robot：</td>
+                    <td id="aimoney">20000</td>
+                </tr>
+                <tr>
+                    <td>Bets：</td>
+                    <td id="aibet">0</td>
+                </tr>
+            </table>
+            <img id="position1" src="images/bigblindPuck.png" alt="none">&nbsp;
+
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card8cover'>
+                cover
+            </div>
+            <div class="back" id='card8back'>
+                <img class='innercard' id="card8" src='sourse/red_joker.png' alt="none">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card9cover'>
+                cover
+            </div>
+            <div class="back" id='card9back'>
+                <img class='innercard' id="card9" src='sourse/red_joker.png'>
+            </div>
+        </div>
+
+    </div>
+    <div class="head-box">
+        <div class="box1">
+
+            <table border="0">
+                <tr>
+                    <td>State</td>
+                    <td id="state">Preflop</td>
+                </tr>
+                <tr>
+                    <td>Pot</td>
+                    <td id="pot">0</td>
+                </tr>
+                <tr>
+                    <td>Act</td>
+                    <td id="act"> </td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card3cover'>
+                cover
+            </div>
+            <div class="back" id='card3back'>
+                <img class='innercard' id="card3" src='sourse/red_joker.png'>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card4cover'>
+                cover
+            </div>
+            <div class="back" id='card4back'>
+                <img class='innercard' id="card4" src='sourse/red_joker.png'>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card5cover'>
+                cover
+            </div>
+            <div class="back" id='card5back'>
+                <img class='innercard' id="card5" src='sourse/red_joker.png'>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card6cover'>
+                cover
+            </div>
+            <div class="back" id='card6back'>
+                <img class='innercard' id="card6" src='sourse/red_joker.png'>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card7cover'>
+                cover
+            </div>
+            <div class="back" id='card7back'>
+                <img class='innercard' id="card7" src='sourse/red_joker.png'>
+            </div>
+        </div>
+
+    </div>
+    <div class="head-box">
+        <div class="box1">
+
+            <table border="0">
+                <tr>
+                    <td>player win：</td>
+                    <td id="humanwin">0</td>
+                </tr>
+                <tr>
+                    <td>Player：</td>
+                    <td id="humanmoney">20000</td>
+                </tr>
+                <tr>
+                    <td>Bets：</td>
+                    <td id="humanbet">0</td>
+                </tr>
+            </table>
+            <img id="position2" src="images/smallblindPuck.png">&nbsp;</img>
+
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card1cover'>
+                cover
+            </div>
+            <div class="back" id='card1back'>
+                <img class='innercard' id="card1" src='sourse/red_joker.png'>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="cover" id='card2cover'>
+                cover
+            </div>
+            <div class="back" id='card2back'>
+                <img class='innercard' id="card2" src='sourse/red_joker.png'>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div>
+        <input id="bet" type="number" min="100" value='150' step="50" required>
+        <button id='actiongreen' onclick="send_raise()">raise</button>
+    </div>
+    <div class="actBox">
+        <button id='actionblue' onclick="send_call()">call</button>
+    </div>
+    <div class="actBox">
+        <button id='actionred' onclick="send_fold()">fold</button>
+    </div>
+    </div>
+    <div class="footer">copyright@gamelab411</div>
+</body>
+
+</html>
